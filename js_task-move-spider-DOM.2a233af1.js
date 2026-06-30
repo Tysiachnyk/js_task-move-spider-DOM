@@ -1,0 +1,2 @@
+"use strict";var wall=document.querySelector(".wall"),spider=document.querySelector(".spider");document.addEventListener("click",function(t){if(wall.contains(t.target)){var e=wall.getBoundingClientRect(),i=t.clientX-e.left-wall.clientLeft-spider.offsetWidth/2,l=t.clientY-e.top-wall.clientTop-spider.offsetHeight/2,n=wall.clientWidth-spider.offsetWidth,a=wall.clientHeight-spider.offsetHeight;spider.style.left="".concat(Math.min(Math.max(i,0),n),"px"),spider.style.top="".concat(Math.min(Math.max(l,0),a),"px")}});
+//# sourceMappingURL=js_task-move-spider-DOM.2a233af1.js.map
