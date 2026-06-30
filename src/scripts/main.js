@@ -4,11 +4,17 @@ const wall = document.querySelector('.wall');
 const spider = document.querySelector('.spider');
 
 document.addEventListener('click', (e) => {
-  if (!wall.contains(e.target)) {
+  const wallRect = wall.getBoundingClientRect();
+
+  if (
+    e.clientX < wallRect.left ||
+    e.clientX > wallRect.right ||
+    e.clientY < wallRect.top ||
+    e.clientY > wallRect.bottom
+  ) {
     return;
   }
 
-  const wallRect = wall.getBoundingClientRect();
   const leftPosition =
     e.clientX - wallRect.left - wall.clientLeft - spider.offsetWidth / 2;
   const topPosition =
